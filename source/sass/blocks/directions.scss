@@ -1,0 +1,25 @@
+.direction__item {
+  text-align: left;
+}
+
+.direction__title {
+  font-family: "Abhaya Libre";
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.direction__timetable {
+  line-height: 20px;
+}
+
+.instructor__word,
+.instructor__name {
+  color: var(--rose);
+}
+
+
+.direction__icon {
+  background-color: var(--background);
+  width: 45px;
+  height: 30px;
+}

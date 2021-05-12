@@ -4,17 +4,19 @@ const sourcemap = require("gulp-sourcemaps");
 const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
-const csso = require("gulp-csso");
+const csso = require("postcss-csso");
 const rename = require("gulp-rename");
-const imagemin = require("gulp-imagemin");
 const htmlmin = require("gulp-htmlmin");
 const uglify = require("gulp-uglify");
-const pipeline = require("readable-stream").pipeline;
+const imagemin = require("gulp-imagemin");
+const webp = require("gulp-webp");
 const del = require("del");
 const sync = require("browser-sync").create();
+const svgstore = require("gulp-svgstore");
+// const ghPages = require('gulp-gh-pages');
 
 
-// Styles
+// Style
 
 const styles = () => {
   return gulp.src("source/sass/style.scss")
@@ -24,64 +26,96 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(csso())
-    .pipe(rename("styles.min.css"))
+    .pipe(rename("style.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
-exports.styles = styles;
+const stylesmin = () => {
+  return gulp.src("source/sass/style.scss")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(sass())
+    .pipe(postcss([
+      autoprefixer(),
+      csso()
+    ]))
+    .pipe(rename("style.min.css"))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/css"))
+    .pipe(sync.stream());
+}
 
-// Images optimization
+
+// HTML
+
+const html = () => {
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build"));
+}
+
+
+// // Scripts
+
+// const scripts = () => {
+//   return gulp.src("source/js/script.js")
+//     .pipe(uglify())
+//     .pipe(rename("script.min.js"))
+//     .pipe(gulp.dest("build/js"))
+//     .pipe(sync.stream());
+// }
+
+
+// Images
 
 const images = () => {
-  return gulp.src("source/img/**/*.{jpg,png,svg}")
+  return gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.mozjpeg({progressive: true}),
+      imagemin.mozjpeg({ progressive: true }),
+      imagemin.optipng({ optimizationLevel: 3 }),
       imagemin.svgo()
     ]))
     .pipe(gulp.dest("build/img"))
 }
 
-exports.images = images;
 
-// HTML minimize
+// WebP
 
-const html = () => {
-  return gulp.src("source/*.html")
-    .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest("build"));
+const createWebp = () => {
+  return gulp.src("source/img/**/*.{jpg,png}")
+    .pipe(webp({ quality: 90 }))
+    .pipe(gulp.dest("build/img"))
 }
 
-exports.html = html;
 
-// JS minimize
+// Sprite
 
-const jsmin = () => {
-  return pipeline(
-    gulp.src("source/js/*.js"),
-    uglify(),
-    gulp.dest("build/js")
-  );
+const sprite = () => {
+  return gulp.src("source/img/svg/*.svg")
+    .pipe(svgstore())
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img"));
 }
 
-exports.jsmin = jsmin;
+exports.sprite = sprite;
 
-// Copy files to build folder
 
-const copy = () => {
-  return gulp.src([
-    "source/fonts/**/*.{woff,woff2}",
-    "source/img/**"
+// Copy
+
+const copy = (done) => {
+  gulp.src([
+    "source/fonts/*.{woff2,woff}",
+    "source/*.ico",
+    "source/img/**/*.{jpg,png,svg}",
   ], {
     base: "source"
   })
-  .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("build"))
+  done();
 }
 
-exports.copy = copy;
 
 // Clean
 
@@ -89,20 +123,6 @@ const clean = () => {
   return del("build");
 };
 
-exports.clean = clean;
-
-// Build
-
-const build = gulp.series(
-  clean,
-  html,
-  copy,
-  jsmin,
-  images,
-  styles
-)
-
-exports.build = build;
 
 // Server
 
@@ -118,14 +138,70 @@ const server = (done) => {
   done();
 }
 
+
+// Reload
+
+const reload = done => {
+  sync.reload();
+  done();
+}
+
+
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series(styles));
-  gulp.watch("source/*.html", gulp.series(html));
-  gulp.watch("source/js/*.js", gulp.series(jsmin));
+  gulp.watch("source/sass/**", gulp.series(build, reload));
+  // gulp.watch("source/js/script.js", gulp.series(scripts));
+  gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
+
+// Build
+
+const build = gulp.series(
+  clean,
+  gulp.parallel(
+    styles,
+    stylesmin,
+    html,
+    // scripts,
+    sprite,
+    copy,
+    images,
+    createWebp
+  ));
+
+
+// Default
+
 exports.default = gulp.series(
-  build, server, watcher
-);
+  clean,
+  gulp.parallel(
+    styles,
+    stylesmin,
+    html,
+    // scripts,
+    sprite,
+    copy,
+    createWebp
+  ),
+  gulp.series(
+    server,
+    watcher
+  ));
+
+
+// // Pg-pages
+// gulp.task('deploy', function () {
+//   return gulp.src("./build/**/*")
+//     .pipe(ghPages());
+// });
+
+exports.styles = styles;
+exports.stylesmin = stylesmin;
+// exports.scripts = scripts;
+exports.images = images;
+exports.createWebp = createWebp;
+exports.copy = copy;
+exports.server = server;
+exports.build = build;

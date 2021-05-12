@@ -1,0 +1,17 @@
+.request__description {
+  font-family: "Abhaya Libre";
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.request__name,
+.request__tel {
+  font-size: 14px;
+  color: rgba(142, 128, 169, 0.4);
+}
+
+.request__button {
+  color: var(--white);
+  background-color: var(--rose);
+  border: none;
+}

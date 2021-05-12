@@ -1,0 +1,46 @@
+.period__list {
+  color: var(--rose);
+}
+
+.period__item--active {
+  position: relative;
+  width: auto;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background: #E65C7B;
+  }
+}
+
+.category__title {
+  font-family: "Abhaya Libre";
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.category__price {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.central__title {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.central__price {
+  font-size: 45px;
+  font-weight: 700;
+}
+
+
+.category__button {
+  color: var(--white);
+  background-color: var(--fonts);
+  border: none;
+}
