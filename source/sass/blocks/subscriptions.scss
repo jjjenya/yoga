@@ -3,18 +3,7 @@
 }
 
 .period__item--active {
-  position: relative;
-  width: auto;
-
-  &::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 1px;
-    background: #E65C7B;
-  }
+  text-decoration: underline;
 }
 
 .category__title {
@@ -38,9 +27,35 @@
   font-weight: 700;
 }
 
-
 .category__button {
   color: var(--white);
   background-color: var(--fonts);
   border: none;
+}
+
+.subscriptions-button {
+  padding: 16px 40px 16px 54px;
+
+  &:hover {
+    // outline: 3px solid #FFFFFF;
+    outline: none;
+    box-shadow:
+      0 0 0 3px var(--white),
+      0 0 0 6px var(--fonts);
+    // background-image: linear-gradient(white, lightgrey);
+  }
+
+  &:focus {
+    background-color: var(--grey);
+    box-shadow:
+    0 0 0 3px var(--white),
+    0 0 0 6px var(--grey);
+  }
+
+  &:active {
+    background-color: var(--rose-darker);
+    box-shadow:
+    0 0 0 3px var(--white),
+    0 0 0 6px var(--rose-darker);
+  }
 }

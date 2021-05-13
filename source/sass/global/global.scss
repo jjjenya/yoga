@@ -50,3 +50,23 @@
   font-weight: 700;
   font-size: 30px;
 }
+
+.link-active {
+  &:hover {
+    color: var(--rose);
+  }
+
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    color: var(--fonts);
+  }
+}
+
+.page__wapper {
+  background-image: url(../../image/background.png);
+  background-repeat: no-repeat;
+
+}

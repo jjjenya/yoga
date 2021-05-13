@@ -14,289 +14,320 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header">
-    <a class="page-header__logo"><img src="#" alt="логотип"></a>
-    <nav class="main-nav">
-      <ul class="main-nav__list site-list">
-        <li class="site-list__item">
-          <a class="site-list__link" href="#directions">
-            Направления
-          </a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="#subscriptions">
-            Абонементы
-          </a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="#team">
-            Наша команда
-          </a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="#gallery">
-            Галерея
-          </a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="#reviews">
-            Отзывы
-          </a>
-        </li>
-      </ul>
-      <div class="site-list site-contact">
-        <a class="site-contact__tel" href="tel:84951234567">
-          8 (495) 123-45-67
-        </a>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <h1 class="visually-hidden">Йога-центр «Yoga»</h1>
-    <section class="intro">
-      <p class="intro__slogan">Почувствуй расслабление в своем теле</p>
-      <h2 class="intro__title">Yoga</h2>
-      <a class="intro__invite" href="#request">
-        Запишитесь на бесплатное<br>пробное занятие
+  <div class="page__wapper">
+    <header class="page-header">
+      <a class="page-header__logo">
+        <img src="image/svg/logo.svg" alt="логотип">
+        <!-- <svg width="126" height="48">
+          <use xlink:href="image/sprite.svg#logo"></use>
+        </svg> -->
       </a>
-      <div class="social">
-        <ul class="social__list site-list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="#" aria-label="vkontakte">
-              <svg class="social__icon" width="13" height="8">
-                <use xlink:href="http://placehold.it/13x8"></use>
-              </svg>
+      <nav class="main-nav">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="#directions">
+              Направления
             </a>
           </li>
-          <li>
-            <a class="social__link social__link--twitter" href="#" aria-label="twitter">
-              <svg class="social__icon" width="12" height="8">
-                <use xlink:href="http://placehold.it/12x8"></use>
-              </svg>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#subscriptions">
+              Абонементы
             </a>
           </li>
-          <li>
-            <a class="social__link social__link--facebook" href="#" aria-label="facebook">
-              <svg class="social__icon" width="5" height="10">
-                <use xlink:href="http://placehold.it/5x10"></use>
-              </svg>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#team">
+              Наша команда
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#gallery">
+              Галерея
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#reviews">
+              Отзывы
             </a>
           </li>
         </ul>
-        <p class="adress-header">Санкт-Петербург</p>
-      </div>
-    </section>
-
-    <section class="directions">
-      <h2 class="directions__title title" id="directions">Направления</h2>
-      <ul class="directions__list site-list direction">
-        <li class="direction__item ashtanga">
-          <img class="direction__img" src="http://placehold.it/250x150" alt="">
-          <h3 class="direction__title">Ашатанга</h3>
-          <p class="direction__timetable">Пн, Ср – с 12:00 до 14:00<br>
-            Чт – с 15:00 до 17:00
-          </p>
-          <div class="direction__wrapper">
-            <dl class="direction__instructor instructor">
-              <dt class="instructor__word">Инструктор</dt>
-              <dd class="instructor__name">Емельянова Полина</dd>
-            </dl>
-            <a class="direction__link" href="#" aria-label="ссылка на профиль инструктора">
-              <svg class="direction__icon" width="8" height="13">
-                <use xlink:href="http://placehold.it/8x13"></use>
-              </svg>
-            </a>
-          </div>
-        </li>
-        <li class="direction__item bikram">
-          <img class="direction__img" src="http://placehold.it/250x150" alt="">
-          <h3 class="direction__title">Бикрам</h3>
-          <p class="direction__timetable">Пт – с 16:00 до 18:00 <br>
-            Вт – с 15:00 до 17:00
-          </p>
-          <div class="direction__wrapper">
-            <dl class="direction__instructor instructor">
-              <dt class="instructor__word">Инструктор</dt>
-              <dd class="instructor__name">Емельянова Полина</dd>
-            </dl>
-            <a class="direction__link" href="#" aria-label="ссылка на профиль инструктора">
-              <svg class="direction__icon" width="8" height="13">
-                <use xlink:href="http://placehold.it/8x13"></use>
-              </svg>
-            </a>
-          </div>
-        </li>
-        <li class="direction__item kundaliny">
-          <img class="direction__img" src="http://placehold.it/250x150" alt="">
-          <h3 class="direction__title">Кундалини</h3>
-          <p class="direction__timetable">Пн, Ср, Пт – с 09:00 до 10:30<br>
-            Вт, Чт – с 08:30 до 10:00
-          </p>
-          <div class="direction__wrapper">
-            <dl class="direction__instructor instructor">
-              <dt class="instructor__word">Инструктор</dt>
-              <dd class="instructor__name">Попов Серёжа</dd>
-            </dl>
-            <a class="direction__link" href="#" aria-label="ссылка на профиль инструктора">
-              <svg class="direction__icon" width="8" height="13">
-                <use xlink:href="http://placehold.it/8x13"></use>
-              </svg>
-            </a>
-
-          </div>
-        </li>
-        <li class="direction__item hatha">
-          <img class="direction__img" src="http://placehold.it/250x150" alt="">
-          <h3 class="direction__title">Хатха</h3>
-          <p class="direction__timetable">Пн, Ср, Пт – с 10:00 до 12:00<br>
-            Вт, Чт – с 19:00 до 21:00
-          </p>
-          <div class="direction__wrapper">
-            <dl class="direction__instructor instructor">
-              <dt class="instructor__word">Инструктор</dt>
-              <dd class="instructor__name">Понкратова Анастасия</dd>
-            </dl>
-            <a class="direction__link" href="#" aria-label="ссылка на профиль инструктора">
-              <svg class="direction__icon" width="8" height="13">
-                <use xlink:href="http://placehold.it/8x13"></use>
-              </svg>
-            </a>
-
-          </div>
-        </li>
-      </ul>
-    </section>
-
-    <section class="subscriptions period category">
-      <h2 class="subscriptions__title title" id="subscriptions">Абонементы</h2>
-      <h3 class="subscriptions__period visually-hidden">Периоды</h3>
-      <ul class="period__list site-list">
-        <li class="period__item period__item--active">1 месяц</li>
-        <li class="period__item">6 месяцев</li>
-        <li class="period__item">12 месяцев</li>
-      </ul>
-      <h3 class="visually-hidden">Категории</h3>
-      <ul class="category__list site-list">
-        <li class="category__item">
-          <p class="category__title">Утро</p>
-          <p class="category__time">Посещение с 08:00 до 16:00</p>
-          <p class="category__price">1 300 Р</p>
-          <button class="category__button">Заказать абонемент</button>
-        </li>
-        <li class="category__item central">
-          <p class="category__title central__title">Безлимит</p>
-          <p class="category__time">Посещение не ограничено по времени</p>
-          <p class="category__price central__price">2 800 Р</p>
-          <button class="category__button">Заказать абонемент</button>
-        </li>
-        <li class="category__item">
-          <p class="category__title">Вечер</p>
-          <p class="category__time">Посещение с 17:00 до 21:00</p>
-          <p class="category__price">2 000 Р</p>
-          <button class="category__button">Заказать абонемент</button>
-        </li>
-      </ul>
-    </section>
-
-    <section class="team">
-      <h2 class="team__title title" id="team">Наша команда</h2>
-      <div class="team__card card">
-        <img class="card__image" src="http://placehold.it/335x335" alt="">
-        <p class="card__name">Серёжа Попов</p>
-        <p class="card__experience">Опыт преподавания 8 лет</p>
-        <p class="card__description">Образование и опыт работы: Практикует с 2011 года, является сертифицированным
-          инструктором по Кундалини-йоге. Большой опыт преподавания йоги для начинающих
-          и продолжающих.</p>
-
-        <p class="card__description">Обучался в Индии (International Association of Yoga: classical yoga,
-          master of principles yoga therapy), Непале (опыт медитативных
-          и дыхательных техник, проживание в Ашраме), Москва (Аштанга йога
-          центр 108 А. Константинова), Московский центр классической
-          йоги Виктора Бойко.</p>
-
-        <p class="card__description">Сертифицированный инструктор по фитнесу и йоге (БГУФК),
-          по массажу (Оздоровительный Витал – центр №401).</p>
-
-        <div class="card__slider">
-          <button class="card__button button-back" type="button">Назад</button>
-          <p class="card__slider-nav">
-            <span>1</span>
-            /
-            <span>3</span>
-          </p>
-          <button class="card__button button-next" type="button">Вперёд</button>
+        <div class="site-list site-contact">
+          <a class="site-contact__tel site-list__link" href="tel:84951234567">
+            8 (495) 123-45-67
+          </a>
         </div>
+      </nav>
+    </header>
+    <main>
+      <h1 class="visually-hidden">Йога-центр «Yoga»</h1>
+      <section class="intro">
+        <p class="intro__slogan">Почувствуй расслабление в своем теле</p>
+        <h2 class="intro__title">Yoga</h2>
+        <a class="intro__invite " href="#request">
+          <svg class="intro__icon request-status" width="9" height="17">
+            <use xlink:href="image/sprite.svg#vector-intro"></use>
+          </svg>
+          Запишитесь на бесплатное<br>пробное занятие
+        </a>
+        <div class="social">
+          <ul class="social__list site-list">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="#" aria-label="vkontakte">
+                <svg class="social__icon" width="13" height="8">
+                  <use xlink:href="http://placehold.it/13x8"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="social__link social__link--twitter" href="#" aria-label="twitter">
+                <svg class="social__icon" width="12" height="8">
+                  <use xlink:href="http://placehold.it/12x8"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="social__link social__link--facebook" href="#" aria-label="facebook">
+                <svg class="social__icon" width="5" height="10">
+                  <use xlink:href="http://placehold.it/5x10"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <p class="adress-header">Санкт-Петербург</p>
+        </div>
+      </section>
+  </div>
+
+  <section class="directions">
+    <h2 class="directions__title title" id="directions">Направления</h2>
+    <ul class="directions__list site-list direction">
+      <li class="direction__item ashtanga">
+        <img class="direction__img" src="image/ashtanga.jpg" width="250" height="150" alt="три девушки в светлом зале с тремя окнами на фоне, позиция: стоят на руках, тело вертикально">
+        <h3 class="direction__title">Ашатанга</h3>
+        <p class="direction__timetable">Пн, Ср – с 12:00 до 14:00<br>
+          Чт – с 15:00 до 17:00
+        </p>
+        <div class="direction__wrapper">
+          <dl class="direction__instructor instructor">
+            <dt class="instructor__word">Инструктор</dt>
+            <dd class="instructor__name">Емельянова Полина</dd>
+          </dl>
+          <a class="direction__link" href="#" aria-label="описание направления йоги">
+            <svg class="direction__icon" width="8" height="13">
+              <use xlink:href="http://placehold.it/8x13"></use>
+            </svg>
+          </a>
+        </div>
+      </li>
+      <li class="direction__item bikram">
+        <img class="direction__img" src="http://placehold.it/250x150" width="250" height="150" alt="">
+        <h3 class="direction__title">Бикрам</h3>
+        <p class="direction__timetable">Пт – с 16:00 до 18:00 <br>
+          Вт – с 15:00 до 17:00
+        </p>
+        <div class="direction__wrapper">
+          <dl class="direction__instructor instructor">
+            <dt class="instructor__word">Инструктор</dt>
+            <dd class="instructor__name">Емельянова Полина</dd>
+          </dl>
+          <a class="direction__link" href="#" aria-label="описание направления йоги">
+            <svg class="direction__icon" width="8" height="13">
+              <use xlink:href="http://placehold.it/8x13"></use>
+            </svg>
+          </a>
+        </div>
+      </li>
+      <li class="direction__item kundaliny">
+        <img class="direction__img" src="http://placehold.it/250x150" width="250" height="150"  alt="">
+        <h3 class="direction__title">Кундалини</h3>
+        <p class="direction__timetable">Пн, Ср, Пт – с 09:00 до 10:30<br>
+          Вт, Чт – с 08:30 до 10:00
+        </p>
+        <div class="direction__wrapper">
+          <dl class="direction__instructor instructor">
+            <dt class="instructor__word">Инструктор</dt>
+            <dd class="instructor__name">Попов Серёжа</dd>
+          </dl>
+          <a class="direction__link" href="#" aria-label="описание направления йоги">
+            <svg class="direction__icon" width="8" height="13">
+              <use xlink:href="http://placehold.it/8x13"></use>
+            </svg>
+          </a>
+
+        </div>
+      </li>
+      <li class="direction__item hatha">
+        <img class="direction__img" src="http://placehold.it/250x150" width="250" height="150" alt="">
+        <h3 class="direction__title">Хатха</h3>
+        <p class="direction__timetable">Пн, Ср, Пт – с 10:00 до 12:00<br>
+          Вт, Чт – с 19:00 до 21:00
+        </p>
+        <div class="direction__wrapper">
+          <dl class="direction__instructor instructor">
+            <dt class="instructor__word">Инструктор</dt>
+            <dd class="instructor__name">Понкратова Анастасия</dd>
+          </dl>
+          <a class="direction__link" href="#" aria-label="описание направления йоги">
+            <svg class="direction__icon" width="8" height="13">
+              <use xlink:href="http://placehold.it/8x13"></use>
+            </svg>
+          </a>
+
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section class="subscriptions period category">
+    <h2 class="subscriptions__title title" id="subscriptions">Абонементы</h2>
+    <h3 class="subscriptions__period visually-hidden">Периоды</h3>
+    <ul class="period__list site-list">
+      <li class="period__item period__item--active">
+        <a class="period__link link-active" href="#">
+          1 месяц
+        </a>
+      </li>
+      <li class="period__item">
+        <a class="period__link link-active" href="#">
+          6 месяцев
+        </a>
+      </li>
+      <li class="period__item">
+        <a class="period__link link-active" href="#">
+          12 месяцев
+        </a>
+      </li>
+    </ul>
+    <h3 class="visually-hidden">Категории</h3>
+    <ul class="category__list site-list">
+      <li class="category__item">
+        <p class="category__title">Утро</p>
+        <p class="category__time">Посещение с 08:00 до 16:00</p>
+        <p class="category__price">1 300 Р</p>
+        <button class="category__button subscriptions-button">Заказать абонемент</button>
+      </li>
+      <li class="category__item central">
+        <p class="category__title central__title">Безлимит</p>
+        <p class="category__time">Посещение не ограничено по времени</p>
+        <p class="category__price central__price">2 800 Р</p>
+        <button class="category__button subscriptions-button">Заказать абонемент</button>
+      </li>
+      <li class="category__item">
+        <p class="category__title">Вечер</p>
+        <p class="category__time">Посещение с 17:00 до 21:00</p>
+        <p class="category__price">2 000 Р</p>
+        <button class="category__button subscriptions-button">Заказать абонемент</button>
+      </li>
+    </ul>
+  </section>
+
+  <section class="team">
+    <h2 class="team__title title" id="team">Наша команда</h2>
+    <div class="team__card card">
+      <img class="card__image" src="http://placehold.it/335x335" alt="">
+      <p class="card__name">Серёжа Попов</p>
+      <p class="card__experience">Опыт преподавания 8 лет</p>
+      <p class="card__description">Образование и опыт работы: Практикует с 2011 года, является сертифицированным
+        инструктором по Кундалини-йоге. Большой опыт преподавания йоги для начинающих
+        и продолжающих.</p>
+
+      <p class="card__description">Обучался в Индии (International Association of Yoga: classical yoga,
+        master of principles yoga therapy), Непале (опыт медитативных
+        и дыхательных техник, проживание в Ашраме), Москва (Аштанга йога
+        центр 108 А. Константинова), Московский центр классической
+        йоги Виктора Бойко.</p>
+
+      <p class="card__description">Сертифицированный инструктор по фитнесу и йоге (БГУФК),
+        по массажу (Оздоровительный Витал – центр №401).</p>
+
+      <div class="card__slider">
+        <button class="card__button button-back" type="button" aria-label="назад" disabled>
+          <svg class="card__icon" width="8" height="13">
+            <use xlink:href="http://placehold.it/8x13"></use>
+          </svg>
+        </button>
+        <p class="card__slider-nav">
+          <span>1</span>
+          /
+          <span>3</span>
+        </p>
+        <button class="card__button button-next" type="button" aria-label="вперёд">
+          <svg class="card__icon" width="8" height="13">
+            <use xlink:href="http://placehold.it/8x13"></use>
+          </svg>
+        </button>
       </div>
+    </div>
 
-      <div class="team__gallery">
-        <img src="http://placehold.it/125x125" alt="Попов Серёжа">
-        <img src="http://placehold.it/125x125" alt="Емельянова Полина">
-        <img src="http://placehold.it/125x125" alt="Понкратова Анастасия">
-      </div>
-    </section>
+    <div class="team__gallery">
+      <img src="http://placehold.it/125x125" alt="Попов Серёжа">
+      <img src="http://placehold.it/125x125" alt="Емельянова Полина">
+      <img src="http://placehold.it/125x125" alt="Понкратова Анастасия">
+    </div>
+  </section>
 
-    <section class="gallery">
-      <h2 class="gallery__title title" id="gallery">Галерея</h2>
-      <img src="http://placehold.it/219x200" alt="">
-      <img src="http://placehold.it/352x200" alt="">
-      <img src="http://placehold.it/91x200" alt="">
-      <img src="http://placehold.it/317x200" alt="">
-      <img src="http://placehold.it/355x200" alt="">
-      <img src="http://placehold.it/114x200" alt="">
-      <img src="http://placehold.it/290x200" alt="">
-      <img src="http://placehold.it/220x200" alt="">
-      <img src="http://placehold.it/301x200" alt="">
-      <img src="http://placehold.it/230x200" alt="">
-      <img src="http://placehold.it/359x200" alt="">
-      <img src="http://placehold.it/91x200" alt="">
-    </section>
+  <section class="gallery">
+    <h2 class="gallery__title title" id="gallery">Галерея</h2>
+    <img src="http://placehold.it/219x200" alt="">
+    <img src="http://placehold.it/352x200" alt="">
+    <img src="http://placehold.it/91x200" alt="">
+    <img src="http://placehold.it/317x200" alt="">
+    <img src="http://placehold.it/355x200" alt="">
+    <img src="http://placehold.it/114x200" alt="">
+    <img src="http://placehold.it/290x200" alt="">
+    <img src="http://placehold.it/220x200" alt="">
+    <img src="http://placehold.it/301x200" alt="">
+    <img src="http://placehold.it/230x200" alt="">
+    <img src="http://placehold.it/359x200" alt="">
+    <img src="http://placehold.it/91x200" alt="">
+  </section>
 
-    <section class="reviews">
-      <h2 class="reviews__title title" id="reviews">Отзывы</h2>
-      <ul class="reviews__list">
-        <li class="reviews__item">
-          <blockquote class="reviews__item-blockquote">
-            <p class="reviews__description">Хожу на йогу вечером, чтобы расслабиться после тяжелого трудового дня. И
-              после
-              занятий наступает спокойствие!
-              Йога это отличный способ быстро и качественно расслабиться. Спасибо инструктору Серёже.</p>
-            <img class="reviews__image" src="http://placehold.it/51x51" alt="">
-            <p class="reviews__author">Алекс Войтенко</p>
-            <time class="reviews__date" datetime="2020-03-07 00:00">7 марта 2020 </time>
-            <a class="reviews__link-vkontakte" href="#">ВКонтакте</a>
-            <a class="reviews__link-twitter" href="#">Твиттер</a>
-          </blockquote>
-        </li>
+  <section class="reviews">
+    <h2 class="reviews__title title" id="reviews">Отзывы</h2>
+    <ul class="reviews__list site-list">
+      <li class="reviews__item">
+        <blockquote class="reviews__item-blockquote">
+          <p class="reviews__description">Хожу на йогу вечером, чтобы расслабиться после тяжелого трудового дня. И
+            после
+            занятий наступает спокойствие!
+            Йога это отличный способ быстро и качественно расслабиться. Спасибо инструктору Серёже.</p>
+          <img class="reviews__image" src="http://placehold.it/51x51" alt="">
+          <p class="reviews__author">Алекс Войтенко</p>
+          <time class="reviews__date" datetime="2020-03-07 00:00">7 марта 2020 </time>
+          <a class="reviews__link-vkontakte" href="#">ВКонтакте</a>
+          <a class="reviews__link-twitter" href="#">Твиттер</a>
+        </blockquote>
+      </li>
 
-        <li class="reviews__item">
-          <blockquote class="reviews__item-blockquote">
-            <p class="reviews__description">Наверное, каждому человеку хочется стать лучше и совершеннее. Но при этом
-              многие
-              подразумевают исключительно физическое здоровье и внешний вид. О духовной составляющей задумываются не так
-              часто. Вот именно йога - это комплекс занятий. Всем рекомендую!</p>
-            <img class="reviews__image" src="http://placehold.it/51x51" alt="">
-            <p class="reviews__author">Злата Хитрова</p>
-            <time class="reviews__date" datetime="2020-03-03 00:00">3 марта 2020 </time>
-            <a class="reviews__link-vkontakte" href="#">ВКонтакте</a>
-            <a class="reviews__link-twitter" href="#">Твиттер</a>
-          </blockquote>
-        </li>
-      </ul>
-      <div class="reviews__slider">
-        <a class="back">влево</a>
-        <a class="next">вправо</a>
-      </div>
-    </section>
+      <li class="reviews__item">
+        <blockquote class="reviews__item-blockquote">
+          <p class="reviews__description">Наверное, каждому человеку хочется стать лучше и совершеннее. Но при этом
+            многие
+            подразумевают исключительно физическое здоровье и внешний вид. О духовной составляющей задумываются не так
+            часто. Вот именно йога - это комплекс занятий. Всем рекомендую!</p>
+          <img class="reviews__image" src="http://placehold.it/51x51" alt="">
+          <p class="reviews__author">Злата Хитрова</p>
+          <time class="reviews__date" datetime="2020-03-03 00:00">3 марта 2020 </time>
+          <a class="reviews__link-vkontakte" href="#">ВКонтакте</a>
+          <a class="reviews__link-twitter" href="#">Твиттер</a>
+        </blockquote>
+      </li>
+    </ul>
+    <div class="reviews__slider">
+      <a class="back">влево</a>
+      <a class="next">вправо</a>
+    </div>
+  </section>
   </main>
 
   <footer class="footer">
+    <div class="footer-wapper-header">
     <section class="contacts">
       <h2 class="visually-hidden">Контакты</h2>
       <dl class="contacts__list">
-        <div class="contacts__item adress">
+        <div class="contacts__item">
           <dt class="contacts__index">Адрес:</dt>
           <dd class="contacts__value">
-            <address>
+            <address class="adress">
               Московский проспект, 22
             </address>
           </dd>
@@ -304,7 +335,7 @@
         <div class="contacts__item tel">
           <dt class="contacts__index">Телефон:</dt>
           <dd class="contacts__value">
-            <a href="84951234567">
+            <a class="contacts__link link-active" href="tel:84951234567">
               8 (495) 123-45-67
             </a>
           </dd>
@@ -316,21 +347,33 @@
         <div class="contacts__item email">
           <dt class="contacts__index">Email:</dt>
           <dd class="contacts__value">
-            <a href="mailto:yogaspb@gmail.com">
+            <a class="contacts__link link-active" href="mailto:yogaspb@gmail.com">
               yogamsk@gmail.com
             </a>
           </dd>
         </div>
       </dl>
-      <ul class="contacts-social-list">
-        <li class="contacts-social-list__item">
-          <a href="#">ВКонтакте</a>
+      <ul class="contacts-social site-list">
+        <li class="contacts-social__item">
+          <a class="contacts-social____link contacts-social____link--vkontakte" href="#" aria-label="vkontakte">
+            <svg class="social__icon" width="13" height="8">
+              <use xlink:href="http://placehold.it/13x8"></use>
+            </svg>
+          </a>
         </li>
-        <li class="contacts-social-list__item">
-          <a href="#">Instagram</a>
+        <li class="contacts-social__item">
+          <a class="contacts-social____link contacts-social____link--twitter" href="#" aria-label="twitter">
+            <svg class="social__icon" width="15.08" height="10.39">
+              <use xlink:href="http://placehold.it/15x10"></use>
+            </svg>
+          </a>
         </li>
-        <li class="contacts-social-list__item">
-          <a href="#">Facebook</a>
+        <li class="contacts-social__item">
+          <a class="contacts-social____link contacts-social____link--facebook" href="#" aria-label="facebook">
+            <svg class="social__icon" width="5.08" height="10.9">
+              <use xlink:href="http://placehold.it/5x10"></use>
+            </svg>
+          </a>
         </li>
       </ul>
     </section>
@@ -340,12 +383,14 @@
         <h2 class="visually-hidden">Форма для заявки на пробное занятие</h2>
         <p class="request__description" id="request">Запишитесь на бесплатное пробное занятие</p>
         <label for="request__name" class="visually-hidden">Ваше имя</label>
-        <input class="request__field" type="text" id="request__name" placeholder="Ваше имя" required>
+        <input class="request__name" type="text" id="request__name" placeholder="Ваше имя" required>
         <label for="request__tel" class="visually-hidden">Ваш телефон</label>
         <input class="request__tel" type="tel" id="request__tel" placeholder="Ваш телефон" required>
-        <button class="request__button" type="submit">Оставить заявку</button>
+        <button class="request__button request-status" type="submit">Оставить заявку</button>
       </form>
     </div>
+  </div>
+
 
     <div class="copyright">
       <a class="copyright__email" href="#">Yogaspb.com</a>

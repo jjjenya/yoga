@@ -7,7 +7,7 @@
   font-size: 265px;
   letter-spacing: 0.2em;
   color: var(--white);
-  text-shadow: 0px 0px 50px rgba(123, 121, 161, 0.75);
+  text-shadow: 0px 0px 50px var(--intro);
   text-transform: uppercase;
 }
 
@@ -16,6 +16,28 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
-
 }
 
+.intro__icon {
+  width: 56px;
+  height: 48px;
+}
+
+.social__icon:hover {
+  box-shadow:
+  0 0 0 3px var(--white),
+  0 0 0 6px var(--fonts);
+  // outline: 3px solid var(--fonts);
+
+  &:focus {
+    box-shadow:
+    0 0 0 3px var(--white),
+    0 0 0 6px var(--background);
+  }
+
+  &:active {
+    box-shadow:
+    0 0 0 3px var(--white),
+    0 0 0 6px var(--rose);
+  }
+}

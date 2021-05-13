@@ -9,7 +9,7 @@ const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
 const uglify = require("gulp-uglify");
 const imagemin = require("gulp-imagemin");
-const webp = require("gulp-webp");
+// const webp = require("gulp-webp");
 const del = require("del");
 const sync = require("browser-sync").create();
 const svgstore = require("gulp-svgstore");
@@ -71,32 +71,32 @@ const html = () => {
 // Images
 
 const images = () => {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
+  return gulp.src("source/image/**/*.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.mozjpeg({ progressive: true }),
       imagemin.optipng({ optimizationLevel: 3 }),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("build/img"))
+    .pipe(gulp.dest("build/image"))
 }
 
 
-// WebP
+// // WebP
 
-const createWebp = () => {
-  return gulp.src("source/img/**/*.{jpg,png}")
-    .pipe(webp({ quality: 90 }))
-    .pipe(gulp.dest("build/img"))
-}
+// const createWebp = () => {
+//   return gulp.src("source/image/**/*.{jpg,png}")
+//     .pipe(webp({ quality: 90 }))
+//     .pipe(gulp.dest("build/image"))
+// }
 
 
 // Sprite
 
 const sprite = () => {
-  return gulp.src("source/img/svg/*.svg")
+  return gulp.src("source/image/svg/*.svg")
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("build/image"));
 }
 
 exports.sprite = sprite;
@@ -108,7 +108,7 @@ const copy = (done) => {
   gulp.src([
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
-    "source/img/**/*.{jpg,png,svg}",
+    "source/image/**/*.{jpg,png,svg}",
   ], {
     base: "source"
   })
@@ -167,8 +167,8 @@ const build = gulp.series(
     // scripts,
     sprite,
     copy,
-    images,
-    createWebp
+    images
+    // createWebp
   ));
 
 
@@ -180,10 +180,10 @@ exports.default = gulp.series(
     styles,
     stylesmin,
     html,
-    // scripts,
+    // // scripts,
     sprite,
-    copy,
-    createWebp
+    copy
+    // createWebp
   ),
   gulp.series(
     server,
@@ -201,7 +201,7 @@ exports.styles = styles;
 exports.stylesmin = stylesmin;
 // exports.scripts = scripts;
 exports.images = images;
-exports.createWebp = createWebp;
+// exports.createWebp = createWebp;
 exports.copy = copy;
 exports.server = server;
 exports.build = build;

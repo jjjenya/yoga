@@ -6,12 +6,52 @@
 
 .request__name,
 .request__tel {
+  border-bottom: 1px solid var(--white);
+  transform: rotate(0.11deg);
+
   font-size: 14px;
-  color: rgba(142, 128, 169, 0.4);
+  color: var(--grey);
+  border: none;
+}
+
+.request__name::placeholder,
+.request__tel::placeholder {
+  color: inherit;
+  font-size: inherit;
+}
+
+.request__name:hover,
+.request__tel:hover {
+  outline: 2px solid var(--background);
+}
+
+.request__name:focus-within,
+.request__tel:focus-within {
+  box-shadow: 0px 0.2em 2.5em var(--fonts);
+  transform: scale(1.025);
+  color: var(--background);
+  opacity: 0.6;
 }
 
 .request__button {
   color: var(--white);
   background-color: var(--rose);
   border: none;
+}
+
+.request-status {
+  background-color: var(--rose);
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    background-color: var(--fonts);
+  }
+
+  &:active {
+    background-color: var(--fonts);
+    opacity: 0.5;
+  }
 }

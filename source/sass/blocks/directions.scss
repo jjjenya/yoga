@@ -22,4 +22,26 @@
   background-color: var(--background);
   width: 45px;
   height: 30px;
+
+  &:hover {
+    opacity: 0.8;
+    box-shadow:
+    0 0 0 3px var(--white),
+    0 0 0 6px var(--background);
+  }
+
+  &:focus {
+    background-color: var(--rose);
+    box-shadow:
+    0 0 0 3px var(--white),
+    0 0 0 6px var(--rose);
+  }
+
+  &:active {
+    background-color: var(--rose-darker);
+    // opacity: 0.5;
+    box-shadow:
+    0 0 0 3px var(--white),
+    0 0 0 6px var(--rose-darker);
+  }
 }

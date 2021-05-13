@@ -1,7 +1,9 @@
 .reviews__author {
-  color: rgba(230, 92, 123, 0.7);
+  color: var(--rose);
+  opacity: 0.7;
 }
 
 .reviews__date {
-  color: rgba(142, 128, 169, 0.7);
+  color: var(--fonts);
+  opacity: 0.7;
 }

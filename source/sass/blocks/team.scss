@@ -8,3 +8,32 @@
   font-size: 14px;
   color: var(--rose);
 }
+
+
+.card__button {
+  background-color: var(--fonts);
+  border: none;
+
+}
+
+.card__button:hover {
+  box-shadow:
+  0 0 0 3px var(--white),
+  0 0 0 6px var(--fonts);
+
+  &:focus {
+    color: var(--rose);
+    box-shadow:
+    0 0 0 3px var(--white),
+    0 0 0 6px var(--rose);
+  }
+
+  &:active {
+    color: var(--rose);
+    opacity: 0.5;
+  }
+
+  &:disabled {
+    background-color: var(--disabled);
+  }
+}

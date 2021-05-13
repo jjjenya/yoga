@@ -4,13 +4,38 @@
 }
 
 .main-nav {
-  text-shadow: 0px 0px 20px #ECE7EC;
+  text-shadow: 0px 0px 20px var(--main-nav);
   text-transform: uppercase;
   font-weight: 600;
-  color: var(--nav);
+
 }
 
 
 .site-contact__tel {
   font-weight: 400;
+  color: var(--nav);
+}
+
+
+// .site-list__link {
+//   color: inherit;
+// }
+
+.site-list__link:hover {
+  // text-decoration: underline;
+  box-shadow:
+  0 0 0 3px var(--white),
+  0 0 0 6px var(--fonts);
+
+  &:focus {
+    color: var(--rose);
+    box-shadow:
+    0 0 0 3px var(--white),
+    0 0 0 6px var(--rose);
+  }
+
+  &:active {
+    color: var(--rose);
+    opacity: 0.5;
+  }
 }
