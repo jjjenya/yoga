@@ -1,0 +1,390 @@
+/* montserrat-regular - latin_cyrillic */
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/montserrat-v15-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/montserrat-v15-latin_cyrillic-regular.woff") format("woff"); }
+
+/* montserrat-500 - latin_cyrillic */
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/montserrat-v15-latin_cyrillic-500.woff2") format("woff2"), url("../fonts/montserrat-v15-latin_cyrillic-500.woff") format("woff"); }
+
+/* montserrat-600 - latin_cyrillic */
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/montserrat-v15-latin_cyrillic-600.woff2") format("woff2"), url("../fonts/montserrat-v15-latin_cyrillic-600.woff") format("woff"); }
+
+/* caveat-regular - latin_cyrillic */
+@font-face {
+  font-family: "Caveat", cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/caveat-v10-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/caveat-v10-latin_cyrillic-regular.woff") format("woff"); }
+
+/* abhaya-libre-700 - latin */
+@font-face {
+  font-family: "Abhaya Libre", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/abhaya-libre-v6-latin-700.woff2") format("woff2"), url("../fonts/abhaya-libre-v6-latin-700.woff") format("woff"); }
+
+:root {
+  --grey: rgba(142, 128, 169, 0.502);
+  --rose: #e65c7b;
+  --rose-darker: rgba(230, 92, 123, 0.5);
+  --white: #ffffff;
+  --background: #8373A1;
+  --copyright: rgba(255, 255, 255, 0.5);
+  --disabled: #998b8b;
+  --fonts: #8e80a9;
+  --intro: rgba(123, 121, 161, 0.75);
+  --main-nav: #ECE7EC;
+  --nav: #8B7EAC; }
+
+.page__body {
+  text-align: center;
+  min-height: 100%;
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 500;
+  color: var(--fonts);
+  text-transform: none;
+  background-color: var(--background-light);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding-bottom: 40px; }
+
+.page a {
+  text-decoration: none; }
+
+.page p {
+  margin: 0px; }
+
+.page img {
+  height: auto; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
+.site-list {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.title {
+  font-family: "Abhaya Libre", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 30px; }
+
+.link-active:hover {
+  color: var(--rose); }
+
+.link-active:focus {
+  opacity: 0.5; }
+
+.link-active:active {
+  color: var(--fonts); }
+
+.icon-vector {
+  fill: var(--background); }
+  .icon-vector:focus {
+    fill: var(--rose); }
+  .icon-vector:active {
+    fill: var(--rose-darker);
+    fill-opacity: 0.3; }
+
+.border {
+  background: var(--white);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+
+.button-switch {
+  background-color: var(--fonts);
+  border: none; }
+
+.button-switch:hover {
+  box-shadow: 0 0 0 3px var(--white), 0 0 0 6px var(--fonts); }
+  .button-switch:hover:focus {
+    color: var(--rose);
+    box-shadow: 0 0 0 3px var(--white), 0 0 0 6px var(--rose); }
+  .button-switch:hover:active {
+    color: var(--rose);
+    opacity: 0.5; }
+  .button-switch:hover:disabled {
+    background-color: var(--disabled); }
+
+.main-nav {
+  outline: 3px solid rgba(255, 0, 221, 0.418);
+  outline-offset: -3px;
+  text-shadow: 0px 0px 20px var(--main-nav);
+  text-transform: uppercase;
+  font-weight: 600;
+  display: flex; }
+
+.site-contact__tel {
+  font-weight: 400;
+  color: var(--nav); }
+
+.site-list__link:hover {
+  box-shadow: 0 0 0 3px var(--white), 0 0 0 6px var(--fonts); }
+  .site-list__link:hover:focus {
+    color: var(--rose);
+    box-shadow: 0 0 0 3px var(--white), 0 0 0 6px var(--rose); }
+  .site-list__link:hover:active {
+    color: var(--rose);
+    opacity: 0.5; }
+
+.intro__slogan {
+  font-family: "Caveat", cursive;
+  font-size: 45px; }
+
+.intro__title {
+  font-size: 265px;
+  letter-spacing: 0.2em;
+  color: var(--white);
+  text-shadow: 0px 0px 50px var(--intro);
+  text-transform: uppercase; }
+
+.intro__invite {
+  color: var(--rose);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px; }
+
+.intro__icon {
+  width: 56px;
+  height: 48px; }
+
+.social__icon:hover {
+  box-shadow: 0 0 0 3px var(--white), 0 0 0 6px var(--fonts); }
+  .social__icon:hover:focus {
+    box-shadow: 0 0 0 3px var(--white), 0 0 0 6px var(--background); }
+  .social__icon:hover:active {
+    box-shadow: 0 0 0 3px var(--white), 0 0 0 6px var(--rose); }
+
+.icon-vector-intro {
+  fill: currentColor; }
+  .icon-vector-intro:hover {
+    fill: var(--rose);
+    opacity: 0.5; }
+  .icon-vector-intro:focus {
+    fill: var(--fonts); }
+  .icon-vector-intro:active {
+    fill: var(--fonts);
+    opacity: 0.5; }
+
+.directions {
+  outline: 2px solid red;
+  background-image: url(../../image/flowers-group.png);
+  background-position: right;
+  background-repeat: no-repeat; }
+
+.directions__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr; }
+
+.direction__item {
+  outline: 3px solid rgba(0, 255, 213, 0.418);
+  outline-offset: -3px;
+  width: 250px;
+  height: auto;
+  text-align: left; }
+
+.direction__title {
+  font-family: "Abhaya Libre", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 16px; }
+
+.direction__timetable {
+  line-height: 20px; }
+
+.instructor__word,
+.instructor__link {
+  color: var(--rose); }
+
+.direction__icon {
+  background-color: var(--background);
+  width: 45px;
+  height: 30px; }
+  .direction__icon:hover {
+    opacity: 0.8;
+    box-shadow: 0 0 0 3px var(--white), 0 0 0 6px var(--background); }
+  .direction__icon:focus {
+    background-color: var(--rose);
+    box-shadow: 0 0 0 3px var(--white), 0 0 0 6px var(--rose); }
+  .direction__icon:active {
+    background-color: var(--rose-darker);
+    box-shadow: 0 0 0 3px var(--white), 0 0 0 6px var(--rose-darker); }
+
+.subscriptions {
+  background-image: url(../../image/clouds-small.png);
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.period__list {
+  color: var(--rose); }
+
+.period__item--active {
+  text-decoration: underline; }
+
+.category__title {
+  font-family: "Abhaya Libre", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 18px; }
+
+.category__price {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Abhaya Libre", "Arial", sans-serif; }
+
+.central__title {
+  font-size: 30px;
+  font-weight: 700; }
+
+.central__price {
+  font-size: 45px;
+  font-weight: 700; }
+
+.category__button {
+  color: var(--white);
+  background-color: var(--fonts);
+  border: none; }
+
+.subscriptions-button {
+  padding: 16px 40px 16px 54px; }
+  .subscriptions-button:hover {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--white), 0 0 0 6px var(--fonts); }
+  .subscriptions-button:focus {
+    background-color: var(--grey);
+    box-shadow: 0 0 0 3px var(--white), 0 0 0 6px var(--grey); }
+  .subscriptions-button:active {
+    background-color: var(--rose-darker);
+    box-shadow: 0 0 0 3px var(--white), 0 0 0 6px var(--rose-darker); }
+
+.card__name {
+  font-family: "Abhaya Libre", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: bold; }
+
+.card__experience {
+  font-size: 14px;
+  color: var(--rose); }
+
+.card__button {
+  background-color: var(--fonts);
+  border: none; }
+
+.reviews__author {
+  color: var(--rose);
+  opacity: 0.7; }
+
+.reviews__date {
+  color: var(--fonts);
+  opacity: 0.7; }
+
+.contacts__item {
+  font-size: 14px; }
+
+.contacts__link {
+  color: var(--fonts); }
+
+.contacts__value {
+  font-style: none; }
+
+.request__description {
+  font-family: "Abhaya Libre", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 30px; }
+
+.request__name,
+.request__tel {
+  border-bottom: 1px solid var(--white);
+  transform: rotate(0.11deg);
+  font-size: 14px;
+  color: var(--grey);
+  border: none; }
+
+.request__name::-moz-placeholder, .request__tel::-moz-placeholder {
+  color: inherit;
+  font-size: inherit; }
+
+.request__name::placeholder,
+.request__tel::placeholder {
+  color: inherit;
+  font-size: inherit; }
+
+.request__name:hover,
+.request__tel:hover {
+  outline: 2px solid var(--background); }
+
+.request__name:focus-within,
+.request__tel:focus-within {
+  box-shadow: 0px 0.2em 2.5em var(--fonts);
+  transform: scale(1.025);
+  color: var(--background);
+  opacity: 0.6; }
+
+.request__button {
+  color: var(--white);
+  background-color: var(--rose);
+  border: none; }
+
+.request-status {
+  background-color: var(--rose); }
+  .request-status:hover {
+    opacity: 0.5; }
+  .request-status:focus {
+    background-color: var(--fonts); }
+  .request-status:active {
+    background-color: var(--fonts);
+    opacity: 0.5; }
+
+.copyright {
+  background-color: var(--background);
+  color: var(--copyright); }
+
+.copyright__email {
+  color: var(--copyright); }
+
+.footer-wapper-header {
+  background-image: url(../../image/footer.png);
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.page__wapper {
+  background-image: url(../../image/background.png);
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.page-header {
+  outline: 3px solid rgba(0, 255, 191, 0.418);
+  outline-offset: -3px;
+  font-size: 16px;
+  display: flex; }
+
+.page-header__logo {
+  outline: 3px solid rgba(25, 0, 255, 0.418);
+  outline-offset: -3px; }
+
+/*# sourceMappingURL=style.css.map */
