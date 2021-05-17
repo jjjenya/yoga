@@ -1,5 +1,5 @@
 .card__name {
-  font-family: "Abhaya Libre";
+  font-family: "Abhaya Libre", "Arial", sans-serif;
   font-size: 18px;
   font-weight: bold;
 }
@@ -13,27 +13,4 @@
 .card__button {
   background-color: var(--fonts);
   border: none;
-
-}
-
-.card__button:hover {
-  box-shadow:
-  0 0 0 3px var(--white),
-  0 0 0 6px var(--fonts);
-
-  &:focus {
-    color: var(--rose);
-    box-shadow:
-    0 0 0 3px var(--white),
-    0 0 0 6px var(--rose);
-  }
-
-  &:active {
-    color: var(--rose);
-    opacity: 0.5;
-  }
-
-  &:disabled {
-    background-color: var(--disabled);
-  }
 }

@@ -1,3 +1,10 @@
+.subscriptions {
+  background-image: url(../../image/clouds-small.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
 .period__list {
   color: var(--rose);
 }
@@ -7,7 +14,7 @@
 }
 
 .category__title {
-  font-family: "Abhaya Libre";
+  font-family: "Abhaya Libre", "Arial", sans-serif;
   font-weight: 700;
   font-size: 18px;
 }
@@ -15,6 +22,7 @@
 .category__price {
   font-size: 30px;
   font-weight: 700;
+  font-family: "Abhaya Libre", "Arial", sans-serif;
 }
 
 .central__title {

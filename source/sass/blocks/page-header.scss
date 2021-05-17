@@ -1,0 +1,21 @@
+.page__wapper {
+  background-image: url(../../image/background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.page-header {
+  outline: 3px solid rgba(0, 255, 191, 0.418);
+  outline-offset: -3px;
+
+  font-size: 16px;
+
+  display: flex;
+}
+
+
+.page-header__logo {
+  outline: 3px solid rgba(25, 0, 255, 0.418);
+  outline-offset: -3px;
+}

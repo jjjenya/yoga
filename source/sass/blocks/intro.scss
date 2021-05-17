@@ -41,3 +41,21 @@
     0 0 0 6px var(--rose);
   }
 }
+
+.icon-vector-intro {
+  fill: currentColor;
+
+  &:hover {
+    fill: var(--rose);
+    opacity: 0.5;
+  }
+
+  &:focus {
+    fill: var(--fonts);
+  }
+
+  &:active {
+    fill: var(--fonts);
+    opacity: 0.5;
+  }
+}

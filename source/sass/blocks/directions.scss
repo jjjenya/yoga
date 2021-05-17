@@ -1,9 +1,32 @@
+.directions {
+  outline: 2px solid red;
+  background-image: url(../../image/flowers-group.png);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.directions__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
 .direction__item {
+  outline: 3px solid rgba(0, 255, 213, 0.418);
+  outline-offset: -3px;
+
+  width: 250px;
+  height: auto;
+
   text-align: left;
 }
 
+.direction__item:first-child {
+
+}
+
 .direction__title {
-  font-family: "Abhaya Libre";
+  font-family: "Abhaya Libre", "Arial", sans-serif;
   font-weight: 700;
   font-size: 16px;
 }
@@ -13,7 +36,7 @@
 }
 
 .instructor__word,
-.instructor__name {
+.instructor__link {
   color: var(--rose);
 }
 

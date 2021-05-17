@@ -1,0 +1,26 @@
+.button-switch {
+  background-color: var(--fonts);
+  border: none;
+}
+
+.button-switch:hover {
+  box-shadow:
+  0 0 0 3px var(--white),
+  0 0 0 6px var(--fonts);
+
+  &:focus {
+    color: var(--rose);
+    box-shadow:
+    0 0 0 3px var(--white),
+    0 0 0 6px var(--rose);
+  }
+
+  &:active {
+    color: var(--rose);
+    opacity: 0.5;
+  }
+
+  &:disabled {
+    background-color: var(--disabled);
+  }
+}

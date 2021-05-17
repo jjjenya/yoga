@@ -1,13 +1,15 @@
-.page-header {
-  font-size: 16px;
 
-}
 
 .main-nav {
+  outline: 3px solid rgba(255, 0, 221, 0.418);
+  outline-offset: -3px;
+
+
   text-shadow: 0px 0px 20px var(--main-nav);
   text-transform: uppercase;
   font-weight: 600;
 
+  display: flex;
 }
 
 
